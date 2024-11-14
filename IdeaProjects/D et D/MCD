@@ -1,0 +1,50 @@
+
+---
+
+### Modèle Conceptuel de Données (MCD)
+
+Le MCD suivant décrit les entités et leurs relations pour un jeu Donjons et Dragons de type plateau. Cela inclut les personnages, les ennemis, et les cases du plateau.
+
+#### Entités et Attributs :
+
+1. **Personnage**
+   - `id` (PK)
+   - `nom`
+   - `type` (Guerrier, Magicien)
+   - `pointsDeVie`
+   - `force`
+
+2. **Arme**
+   - `id` (PK)
+   - `nom` (Épée, Massue)
+   - `puissance`
+
+3. **Potion**
+   - `id` (PK)
+   - `nom` (GrandePotion, PotionStandard)
+   - `effet`
+
+4. **Ennemi**
+   - `id` (PK)
+   - `type` (Dragon, Sorcier, Gobelin)
+   - `pointsDeVie`
+   - `force`
+
+5. **Case**
+   - `id` (PK)
+   - `type` (Arme, Potion, Ennemi, Vide)
+
+6. **Plateau**
+   - `id` (PK)
+   - `taille`
+
+#### Relations :
+
+- Un **Personnage** peut avoir plusieurs **Armes** (relation `1:N`).
+- Un **Personnage** peut être positionné sur une **Case** à un moment donné (relation `1:1`).
+- Une **Case** peut contenir soit une **Arme**, soit une **Potion**, soit un **Ennemi**, soit rien (relation `1:1` entre **Case** et les autres entités).
+- Le **Plateau** est composé de plusieurs **Cases** (relation `1:N`).
+
+---
+
+Cela vous fournit une structure solide pour organiser les informations du jeu et une vision claire de la logique du système.

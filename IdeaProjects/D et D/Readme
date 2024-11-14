@@ -1,0 +1,31 @@
+# Projet Donjons & Dragons (D et D)
+
+Ce projet est un jeu textuel en Java inspiré de l'univers Donjons & Dragons. Le jeu permet de créer des personnages (guerriers et magiciens) et de les faire progresser sur un plateau. Les joueurs interagissent avec différents types de cases, y compris des ennemis, des armes, et des potions, pour gagner en puissance et avancer dans le jeu.
+
+## Fonctionnalités
+
+- **Création de Personnages** : Le joueur peut choisir entre deux types de personnages - Guerrier et Magicien - avec des caractéristiques uniques.
+- **Mouvement sur le Plateau** : Le personnage se déplace sur un plateau de 64 cases.
+- **Interactions avec des Cases** :
+  - **Armes** : Certaines cases contiennent des armes (comme Épée ou Massue).
+  - **Potions** : Il existe des cases avec des potions (PotionStandard et GrandePotion).
+  - **Ennemis** : Le personnage peut rencontrer des ennemis tels que Dragon, Sorcier, et Gobelin.
+- **Gestion des équipements** : Chaque personnage peut être équipé d'armes offensives et de protections.
+
+## Structure du Projet
+
+### Classes Principales
+
+- **Personnage** : Classe de base pour tous les personnages, possédant des attributs comme les points de vie, la force, et l'inventaire.
+- **Guerrier** et **Magicien** : Sous-classes de Personnage, chacune avec des caractéristiques spécifiques.
+- **Arme** : Classe pour les objets d'attaque avec des sous-classes comme `ArmeEpee` et `ArmeMassue`.
+- **Ennemi** : Classe pour les ennemis avec des sous-classes `EnnemiDragon`, `EnnemiSorcier`, et `EnnemiGobelin`.
+- **Potion** : Classe pour les objets de soin avec `GrandePotion` et `PotionStandard` comme sous-classes.
+- **Plateau** : Classe pour gérer la carte du jeu, contenant les cases et gérant les déplacements.
+- **Jeu** : Classe principale pour exécuter le jeu, gérer les interactions, et avancer les tours.
+
+## Instructions d'Utilisation
+
+1. **Clonez le dépôt** :
+   ```bash
+   git clone https://github.com/Hamtidiane/JAVA.git
